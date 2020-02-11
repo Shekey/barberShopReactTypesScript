@@ -1,0 +1,67 @@
+.barber-form {
+    width: 415px;
+    background: #0b1d31;
+    color: #fff;
+    padding: 30px 20px;
+    position: absolute;
+    bottom: -10px;
+    right: 0%;
+
+    p {
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        position: relative;
+        order: 1;
+        bottom: auto;
+        right: auto;
+        margin-top: 50px;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: 'Squada One';
+        font-size: 37px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+    }
+
+    &__button {
+        padding: 13px;
+        border-radius: 30px;
+        color: #fff;
+        background: rgb(243, 161, 67);
+        margin: 30px 0 0;
+        flex-basis: 100%;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab';
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            @media (max-width: $breakpoint-tablet) {
+                display: none;
+            }
+
+        }
+
+        .show-on-tablet {
+            display: none;
+            @media (max-width: $breakpoint-tablet) {
+                display: inline-block;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+}

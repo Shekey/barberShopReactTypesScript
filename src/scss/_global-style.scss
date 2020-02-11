@@ -1,0 +1,24 @@
+$breakpoint-tablet: 768px;
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+    background: #fefcea;
+    /* Old browsers */
+    background: -moz-linear-gradient(bottom, #fefcea 0%, #f7f1ca 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, #fefcea 0%, #f7f1ca 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, #fefcea 0%, #f7f1ca 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcea', endColorstr='#f1da36', GradientType=0);
+    /* IE6-9 */
+
+    min-height: 100vh;
+    position: relative;
+
+    font-family: 'Roboto Slab';
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
