@@ -7,13 +7,6 @@ interface FormProps {
     title: string
 }
 
-var dateSelected: Date | null | undefined = null;
-
-function handleChange(date: Date | null | undefined) {
-    dateSelected = date;
-    console.log(dateSelected);
-};
-
 class Form extends Component<FormProps> {
     state = {
         startDate: null
@@ -23,9 +16,9 @@ class Form extends Component<FormProps> {
         this.setState({
             startDate: date
           });
-        console.log(this.state.startDate);
     };
     render() {
+        console.log(this.state.startDate)
         return (
             <form className="barber-form">
                 <h3 className="barber-form__title">{this.props.title}</h3>
@@ -55,7 +48,7 @@ class Form extends Component<FormProps> {
                 </div>
 
                 <div className="input-wrapper">
-                    <DatePicker  selected={this.state.startDate}  onChange={(date: Date | null) => handleChange(date)} placeholderText="Select Date" />
+                    <DatePicker  selected={this.state.startDate}  minDate={new Date()}  onChange={(date: Date | null) => this.handleChange(date)} placeholderText="Select Date" />
                     <p>Please pick a date</p>
 
                     <select className="time-select">
