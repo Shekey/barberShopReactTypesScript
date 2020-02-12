@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
+import axios from 'axios'
 
 import "react-datepicker/dist/react-datepicker.css";
 
 interface FormProps {
-    title: string
+    title: string | null,
+    startDate: Date | null,
+    barbers: Array<Object> | null
 }
 
 class Form extends Component<FormProps> {
     state = {
-        startDate: null
+        startDate: null,
+        barbers: []
     };
 
     handleChange(date: Date | null | undefined) {
@@ -17,8 +21,16 @@ class Form extends Component<FormProps> {
             startDate: date
           });
     };
+
+    componentDidMount(){
+        axios.get(`http://localhost:4000/barbers`)
+        .then(res => {
+            console.log(res.data);
+          const barbers = res.data;
+          this.setState({ barbers });
+        });
+    }
     render() {
-        console.log(this.state.startDate)
         return (
             <form className="barber-form">
                 <h3 className="barber-form__title">{this.props.title}</h3>
