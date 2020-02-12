@@ -4,11 +4,8 @@
     color: #fff;
     padding: 30px 20px;
     position: absolute;
-    bottom: -10px;
-    right: 0%;
-
-    p {
-    }
+    bottom: 10px;
+    right: 25px;
 
     @media (max-width: $breakpoint-tablet) {
         position: relative;

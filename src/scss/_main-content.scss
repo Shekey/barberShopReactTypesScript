@@ -1,11 +1,11 @@
 .main-content {
     margin-top: 50px;
     display: flex;
-    max-width: 1200px;
-    position: relative;
     padding-bottom: 50px;
     margin: 50px auto 0;
     flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding: 0 25px;
 
     @media (max-width: $breakpoint-tablet) {
         padding: 0 25px 20px;
@@ -14,10 +14,18 @@
     figure {
         padding: 15px;
         border: 3px solid #0b1d31;
-        flex-basis: 79%;
+        flex-basis: 100%;
+        margin-right: 25%;
 
         @media (max-width: $breakpoint-tablet) {
-            flex-basis: 100%;
+            margin-right: 0%;
         }
     }
+}
+
+#root {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
 }
